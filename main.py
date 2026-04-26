@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
-from keras.models import load_model
+import tf_keras as keras 
 from PIL import Image, ImageOps
 import numpy as np
 
 app = Flask(__name__)
 
 # Cargar el modelo 
-model = load_model("keras_model.h5", compile=False)
+model = keras.models.load_model("keras_model.h5", compile=False)
 class_names = open("labels.txt", "r").readlines()
 
 @app.route("/", methods=["GET", "POST"])
