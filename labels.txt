@@ -1,0 +1,3 @@
+0 Plastico
+1 Organico
+2 Vidrios
